@@ -1,5 +1,7 @@
 #encoding: UTF-8
 #Autor Aaron Villanueva
+
+#Listas que serán evaluadas en los ejercicios
 listaA=[1,2,3,4]
 listaB=[4,3,2,1]
 listaC=[1,1,2,2,3,3]
@@ -14,6 +16,7 @@ anagramaE="ana"
 listasnumericas=[listaA,listaB,listaC,listaD,listaE,listaF]
 listasAnagrama=[anagramaA,anagramaB,anagramaC,anagramaD,anagramaE]
 
+#Esta función crea una nueva lista que suma el valor de una lista con el valor anterior
 def sumaAcumulada(original):
   lista=original[:]
   lenLista=len(lista)
@@ -21,6 +24,7 @@ def sumaAcumulada(original):
     lista[i]=lista[i]+lista[i-1]
   return(lista)
 
+#Esta función elimine el primer y el último término de una función
 def eliminarPrimerySegundo(entrada):
   lista=entrada[:]
   if len(lista)>=2:
@@ -30,6 +34,7 @@ def eliminarPrimerySegundo(entrada):
     lista.pop()
   return(lista)
 
+#Esta función verifica si la lista provista esta ordenada de menor a mayor
 def verificarListaOrdenada(entrada):
   lista=entrada[:]
   list.sort(lista)
@@ -39,6 +44,7 @@ def verificarListaOrdenada(entrada):
     conclusion=False
   return(conclusion)
 
+#Esta función verifica si un par de cadenas son anagramas. Es decir, si cada una de las letras puede ser reacomodada para crear la otra cadena.
 def verificarAnagrama(primer,segundo):
   primer=str.lower(primer)
   segundo=str.lower(segundo)
@@ -70,6 +76,7 @@ def verificarAnagrama(primer,segundo):
     
   return(conclusion)
 
+#Esta función verifica si existen valores repetidos en una lista
 def verificarRepetidos(lista):
   lenLista=len(lista)
   if lenLista>=1:
@@ -83,6 +90,7 @@ def verificarRepetidos(lista):
     conclusion="La cadena no tiene valores"
   return(conclusion)
 
+#Esta función elimina los valores repetidos de una lista
 def eliminarRepetidos(original):
   lista=original[:]
   lenLista=len(lista)
@@ -94,6 +102,7 @@ def eliminarRepetidos(original):
           lista.remove(i)
   return(lista)
 
+#Esta función principal aprovecha las listas de listas para realizar una iteración de valores posibles para probar las funciones anteriores.
 def main():
   print("Ejercicio 1:")
   for i in listasnumericas:
