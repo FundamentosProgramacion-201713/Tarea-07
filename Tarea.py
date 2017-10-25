@@ -1,7 +1,7 @@
 #encoding: UTF-8
 #Autor Aaron Villanueva
 
-def primerysegundo(entrada):
+def eliminarprimerysegundo(entrada):
   lista=entrada[:]
   if len(lista)>=2:
     lista.pop(0)
@@ -10,6 +10,14 @@ def primerysegundo(entrada):
     lista.pop()
   return(lista)
 
+def verificarlistaordenada(entrada):
+  lista=entrada[:]
+  list.sort(lista)
+  if lista==entrada:
+    conclusion=True
+  else:
+    conclusion=False
+  return(conclusion)
 
 
 def main():
