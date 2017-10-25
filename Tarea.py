@@ -11,7 +11,7 @@ anagramaB="amor"
 anagramaC="amar"
 anagramaD="RAMO"
 listasnumericas=[listaA,listaB,listaC,listaD,listaE,listaF]
-listasanagrama=[anagramaA,anagramaB,anagramaC,anagramaD]
+listasAnagrama=[anagramaA,anagramaB,anagramaC,anagramaD]
 
 def sumaAcumulada(original):
   lista=original[:]
@@ -20,7 +20,7 @@ def sumaAcumulada(original):
     lista[i]=lista[i]+lista[i-1]
   return(lista)
 
-def eliminarprimerysegundo(entrada):
+def eliminarPrimerySegundo(entrada):
   lista=entrada[:]
   if len(lista)>=2:
     lista.pop(0)
@@ -29,7 +29,7 @@ def eliminarprimerysegundo(entrada):
     lista.pop()
   return(lista)
 
-def verificarlistaordenada(entrada):
+def verificarListaOrdenada(entrada):
   lista=entrada[:]
   list.sort(lista)
   if lista==entrada:
@@ -93,6 +93,12 @@ def main():
     print("La lista",i,"regresa la lista acumulada",sumaAcumulada(i))
   print("Ejercicio 2:")
   for i in listasnumericas:
-    print("La lista original",i,"regresa",eliminarprimerysegundo(i))
+    print("La lista original",i,"regresa",eliminarPrimerySegundo(i))
+  print("Ejercicio 3:")
+  for i in listasnumericas:
+    print("La lista",i,"es ordenada:",verificarListaOrdenada(i))
+  print("Ejercicio 4:")
+    for i in listasAnagrama:
+      print("La cadena",i,"es anagrama",verificarAnagrama(i+1))
     
 main()
