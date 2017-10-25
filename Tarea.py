@@ -58,6 +58,15 @@ def verificarRepetidos(lista):
       conclusion=False
   return(conclusion)
 
+def eliminarRepetidos(lista):
+  for i in lista:
+    numero=lista.count(i)
+    print(numero)
+    if numero>1:
+      for j in range(numero-1):
+        lista.remove(i)
+  return(lista)
+
 def main():
 
 main()
