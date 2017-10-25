@@ -98,7 +98,7 @@ def main():
   for i in listasnumericas:
     print("La lista",i,"es ordenada:",verificarListaOrdenada(i))
   print("Ejercicio 4:")
-    for i in listasAnagrama:
-      print("La cadena",i,"es anagrama",verificarAnagrama(i+1))
+    for i in range(0,4):
+      print("La cadena",listaAnagrama[i],"es anagrama",verificarAnagrama(listaAnagrama[i+1]))
     
 main()
