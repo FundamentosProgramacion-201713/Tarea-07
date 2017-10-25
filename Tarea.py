@@ -1,10 +1,16 @@
-def primerysegundo(lista):
+#encoding: UTF-8
+#Autor Aaron Villanueva
+
+def primerysegundo(entrada):
+  lista=entrada[:]
   if len(lista)>=2:
     lista.pop(0)
     lista.pop()
   elif len(lista)==1:
     lista.pop()
   return(lista)
+
+
 
 def main():
 
