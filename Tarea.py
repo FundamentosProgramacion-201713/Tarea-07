@@ -10,8 +10,9 @@ anagramaA="roma"
 anagramaB="amor"
 anagramaC="amar"
 anagramaD="RAMO"
+anagramaE="ana"
 listasnumericas=[listaA,listaB,listaC,listaD,listaE,listaF]
-listasAnagrama=[anagramaA,anagramaB,anagramaC,anagramaD]
+listasAnagrama=[anagramaA,anagramaB,anagramaC,anagramaD,anagramaE]
 
 def sumaAcumulada(original):
   lista=original[:]
@@ -98,7 +99,7 @@ def main():
   for i in listasnumericas:
     print("La lista",i,"es ordenada:",verificarListaOrdenada(i))
   print("Ejercicio 4:")
-    for i in range(0,4):
-      print("La cadena",listaAnagrama[i],"es anagrama",verificarAnagrama(listaAnagrama[i+1]))
+  for i in range(0,5):
+    print("La cadena",listasAnagrama[-i],"es anagrama con",listasAnagrama[i-1],verificarAnagrama(listasAnagrama[-i],listasAnagrama[i-1]))
     
 main()
