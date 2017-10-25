@@ -1,7 +1,19 @@
 #encoding: UTF-8
 #Autor Aaron Villanueva
+listaA=[1,2,3,4]
+listaB=[4,3,2,1]
+listaC=[1,1,2,2,3,3]
+listaD=[]
+listaE=[1]
+listaF=[1,2]
+anagramaA="roma"
+anagramaB="amor"
+anagramaC="amar"
+anagramaD="RAMO"
+listasnumericas=[listaA,listaB,listaC,listaD,listaE,listaF]
+listasanagrama=[anagramaA,anagramaB,anagramaC,anagramaD]
 
-def verificarAnagrama(original):
+def sumaAcumulada(original):
   lista=original[:]
   lenLista=len(lista)
   for i in range(1,lenLista):
@@ -58,7 +70,6 @@ def verificarAnagrama(primer,segundo):
   return(conclusion)
 
 def verificarRepetidos(lista):
-  conteo=0
   for i in lista:
     numero=lista.count(i)
     if numero>1:
@@ -77,14 +88,11 @@ def eliminarRepetidos(lista):
   return(lista)
 
 def main():
-  listaA=[1,2,3,4]
-  listaB=[4,3,2,1]
-  listaC=[1,1,2,2,3,3]
-  listaD=[]
-  listaE=[1]
-  listaF=[1,2]
-  anagramaA="roma"
-  anagramaB="amor"
-  anagramaC="amar"
-  anagramaD="RAMO"
+  print("Ejercicio 1:")
+  for i in listasnumericas:
+    print("La lista",i,"regresa la lista acumulada",sumaAcumulada(i))
+  print("Ejercicio 2:")
+  for i in listasnumericas:
+    print("La lista original",i,"regresa",eliminarprimerysegundo(i))
+    
 main()
