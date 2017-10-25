@@ -48,6 +48,16 @@ def verificarAnagrama(primer,segundo):
     
   return(conclusion)
 
+def verificarRepetidos(lista):
+  conteo=0
+  for i in lista:
+    numero=lista.count(i)
+    if numero>1:
+      conclusion=True
+    else:
+      conclusion=False
+  return(conclusion)
+
 def main():
 
 main()
