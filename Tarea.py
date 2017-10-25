@@ -27,6 +27,8 @@ def verificarlistaordenada(entrada):
   return(conclusion)
 
 def verificarAnagrama(primer,segundo):
+  primer=str.lower(primer)
+  segundo=str.lower(segundo)
   primer=list(str(primer))
   segundo=list(str(segundo))
   lenPrimer=len(primer)
@@ -75,5 +77,14 @@ def eliminarRepetidos(lista):
   return(lista)
 
 def main():
-
+  listaA=[1,2,3,4]
+  listaB=[4,3,2,1]
+  listaC=[1,1,2,2,3,3]
+  listaD=[]
+  listaE=[1]
+  listaF=[1,2]
+  anagramaA="roma"
+  anagramaB="amor"
+  anagramaC="amar"
+  anagramaD="RAMO"
 main()
