@@ -3,6 +3,8 @@
 #A01374994
 #Programa que realiza diferentes tipos de preubas con listas
 
+
+#Funcion que suma los elemenos de una lista acumulandolos
 def sumaracumuladoslistas(lista):
     sumaacumulada = 0
     listasumas = []
@@ -11,6 +13,7 @@ def sumaracumuladoslistas(lista):
          listasumas.append(sumaacumulada)
     return listasumas
 
+#Funcion que elimina el primer y último elemento
 def eliminarextremoslistas(lista):
     if len(lista) >=2 :
         lista.pop()
@@ -21,6 +24,7 @@ def eliminarextremoslistas(lista):
     else:
         return []
 
+#funcion que compueba si los elementos de una lista estan en orden
 def comprobarordenlistas(lista):
     lista2 = lista[:]
     lista2.sort()
@@ -29,6 +33,7 @@ def comprobarordenlistas(lista):
     else:
         return False
 
+#Funcion que comprueba si una cadena es una anagrama de otra
 def comprobaranagramas(cadena1,cadena2):
     listacad1 = list(cadena1.lower())
     listacad2 = list(cadena2.lower())
@@ -39,6 +44,7 @@ def comprobaranagramas(cadena1,cadena2):
     else:
         return False
 
+#Funcion que determina si la lista contiene duplicados
 def determinarduplicados(lista):
     lista2 = []
     for x in lista:
@@ -49,6 +55,7 @@ def determinarduplicados(lista):
     else:
         return True
 
+#Funcion que elimina los duplicados en una lista
 def removerduplicados(lista):
     lista2 = []
     for x in lista:
