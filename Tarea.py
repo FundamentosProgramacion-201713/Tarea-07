@@ -1,6 +1,13 @@
 #encoding: UTF-8
 #Autor Aaron Villanueva
 
+def verificarAnagrama(original):
+  lista=original[:]
+  lenLista=len(lista)
+  for i in range(1,lenLista):
+    lista[i]=lista[i]+lista[i-1]
+  return(lista)
+
 def eliminarprimerysegundo(entrada):
   lista=entrada[:]
   if len(lista)>=2:
