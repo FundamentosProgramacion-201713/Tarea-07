@@ -71,21 +71,27 @@ def verificarAnagrama(primer,segundo):
   return(conclusion)
 
 def verificarRepetidos(lista):
-  for i in lista:
-    numero=lista.count(i)
-    if numero>1:
-      conclusion=True
-    else:
-      conclusion=False
+  lenLista=len(lista)
+  if lenLista>=1:
+    for i in lista:
+      numero=lista.count(i)
+      if numero>1:
+        conclusion=True
+      else:
+        conclusion=False
+  else:
+    conclusion="La cadena no tiene valores"
   return(conclusion)
 
-def eliminarRepetidos(lista):
-  for i in lista:
-    numero=lista.count(i)
-    print(numero)
-    if numero>1:
-      for j in range(numero-1):
-        lista.remove(i)
+def eliminarRepetidos(original):
+  lista=original[:]
+  lenLista=len(lista)
+  if lenLista>=1:
+    for i in lista:
+      numero=lista.count(i)
+      if numero>1:
+        for j in range(numero-1):
+          lista.remove(i)
   return(lista)
 
 def main():
