@@ -101,5 +101,11 @@ def main():
   print("Ejercicio 4:")
   for i in range(0,5):
     print("La cadena",listasAnagrama[-i],"es anagrama con",listasAnagrama[i-1],verificarAnagrama(listasAnagrama[-i],listasAnagrama[i-1]))
-    
+  print("Ejercicio 5:")
+  for i in listasnumericas:
+    print("La cadena",i,"tiene valores repetidos:",verificarRepetidos(i))
+  print("Ejercicio 6:")
+  for i in listasnumericas:
+    print("La cadena",i,"sin valores repetidos es:",eliminarRepetidos(i))
+  
 main()
