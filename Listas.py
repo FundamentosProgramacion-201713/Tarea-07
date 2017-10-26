@@ -2,6 +2,9 @@
 #encode: UTF-8
 #Descripción:
 
+'''
+Función que suma los números de una lista, en una serie.
+'''
 def sumarLista(lista):
     listasum = []
     suma = 0
@@ -9,6 +12,10 @@ def sumarLista(lista):
         suma += i
         listasum.append(suma)
     return listasum
+
+'''
+Función que quita los extremos de una lista
+'''
 
 def quitarExtremos(lista):
     if lista == []:
@@ -21,6 +28,9 @@ def quitarExtremos(lista):
         lista.remove(lista[len(lista)-1])
         return lista
 
+'''
+Le dice al usuario si una lista dada por el usuario está de menor a mayor
+'''
 def comprobarOrden(lista):
     listaOrden = []
     for i in lista:
@@ -31,6 +41,9 @@ def comprobarOrden(lista):
     else:
         return False
 
+'''
+Ld dice al usuario si 2 cadenas comparten las mismas letras
+'''
 def esAnagrama(cadena1,cadena2):
     cadena1 = cadena1.lower()
     cadena2 = cadena2.lower()
@@ -43,6 +56,9 @@ def esAnagrama(cadena1,cadena2):
     else:
         return False
 
+'''
+Función que le dice al usuario si hay dos o más de un dígito en una lista
+'''
 def esDuplicado(lista):
     listaUnica = []
     for i in lista:
@@ -53,6 +69,9 @@ def esDuplicado(lista):
     else:
         return True
 
+'''
+Función que elimina los dígitos repetidos en una lista
+'''
 def eliminarRepetido(lista):
     lista.reverse()
     for k in lista:
@@ -63,7 +82,9 @@ def eliminarRepetido(lista):
 
 
 
-
+'''
+Función que prueba las funciones anteriores en diferentes escenarios
+'''
 def main():
     print("Ejercicio 1")
     print(" ", u'\u2022', "La lista [1,2,3,4,5] regresa la lista acumulada ", sumarLista([1,2,3,4,5]))
