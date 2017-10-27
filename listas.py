@@ -2,7 +2,7 @@
 #coded by Jordan González Bustamante
 
 def exercise6(case):
-    return set(case)
+    return list(set(case))
 
 def exercise5(case):
     if len(case) != len(set(case)):
