@@ -13,8 +13,7 @@ def accumulateList(listA):
 
 
 def deleteFrstAndLst(listA):
-    listA = listA[1:(len(listA)-1)]
-    return listA
+    return listA[1:(len(listA)-1)]
 
 
 def checkIfOrdered(listA):
@@ -39,22 +38,14 @@ def checkAnagram(listA, listB):
 
 
 def checkIfRepeated(listA):
-    listB = []
-    listRep = []
-    result = False
-    for x in listA:
-        if x not in listB:
-            listB.append(x)
-        elif x not in listRep:
-            listRep.append(x)
-    if listRep:
-        result = True
+    result = True
+    if listA == list(set(listA)):
+        result = False
     return result
 
 
 def cleanLists(listA):
-    listA = list(set(listA))
-    return listA
+    return list(set(listA))
 
 
 def main():
