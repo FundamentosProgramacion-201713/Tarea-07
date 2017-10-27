@@ -3,6 +3,11 @@
 # Práctica sobre listas
 
 def sumarNumeros(lista):
+    '''
+    Suma los números en una lista.
+    :param lista:
+    :return: suma
+    '''
     suma = []
     s = 0
     for numero in lista:
@@ -12,6 +17,11 @@ def sumarNumeros(lista):
     return suma
 
 def eliminarPrimeroYUltimo(lista):
+    '''
+    Elimina el primer y el último dato de una lista.
+    :param lista:
+    :return: nueva
+    '''
     nueva = []
     penultimo = len(lista) - 1
     for elemento in lista[1:penultimo]:
@@ -20,6 +30,11 @@ def eliminarPrimeroYUltimo(lista):
     return nueva
 
 def identificarOrdenados(lista):
+    '''
+    Identifica si una lista está ordenada o no.
+    :param lista:
+    :return: True / False
+    '''
     ordenada = sorted(lista)
     if ordenada == lista:
         return True
@@ -27,6 +42,12 @@ def identificarOrdenados(lista):
         return False
 
 def identificarAnagramas(cadena1,cadena2):
+    '''
+    Identifica si dos cadenas son anagramas o no.
+    :param cadena1:
+    :param cadena2:
+    :return: True / False
+    '''
     cadena1 = cadena1.upper()
     cadena2 = cadena2.upper()
     lista1 = list(cadena1)
@@ -39,6 +60,11 @@ def identificarAnagramas(cadena1,cadena2):
         return False
 
 def identificarDuplicado(lista):
+    '''
+    Identifica si una lista tiene duplicados o no.
+    :param lista:
+    :return: True / False
+    '''
     repetido = []
     unico = []
     for dato in lista:
@@ -53,6 +79,11 @@ def identificarDuplicado(lista):
         return False
 
 def eliminarDuplicado(lista):
+    '''
+    Identifica y elimina los duplicados de una lista.
+    :param lista:
+    :return: lista
+    '''
     lista = sorted(lista)
     for dato in lista:
         if lista.count(dato) > 1:
