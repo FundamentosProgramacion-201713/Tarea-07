@@ -39,14 +39,10 @@ def Anagrama(a,b):
     else:
         return False
 def dobles(a):
-    n=list(set(a))
-    print(n)
-    for i in a:
-        for j in n:
-            if j == i :
-                a.remove(n[j])
-                print(n)
-                return a
+    n=True
+    if a==list(set(a)):
+        n=False
+    return n
 def elimina(a):
 
     return set(a)
@@ -69,10 +65,10 @@ def main():
     print("° Las palabras 'mora' y 'Amor' son anagramas? ", Anagrama("mora","Amor"))
     print("° Las palabras 'papaya' y 'coco' son anagramas?", Anagrama("papaya","coco"))
     print("° Las palabras 'energicamente' y 'generiacamente' son anagramas?", Anagrama("energicamente","generiacamente" ))
-    """print("Ejercicio 5:")
+    print("Ejercicio 5:")
     print("° La lista [1,2,1,4,5,6,7] tiene dobles?  ", dobles([1,2,1,4,5,6,7]))
     print("La	lista	[1,2,3]	tiene dobles?	", dobles([1,2,3]))
-    print("La	lista	[5]	tiene dobles?	", dobles([5]))"""
+    print("La	lista	[5]	tiene dobles?	", dobles([5]))
     print("Ejercicio 6:")
     print("° La lista [1,2,3,4,5] sin dobles es: ", elimina([1, 2, 3, 4, 5]))
     print("La	lista	[1,1,2,2,3,6,5,4,4,5]	sin dobles es:	", elimina([1,1,2,2,3,6,5,4,4,5]))
